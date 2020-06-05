@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+form{
+    width: 500px;
+    margin: auto;
+}
+
+/*para fazer uma formatação igual para duas coisas eu não preciso copiar e colar é só eu colocar uma virgula e depois colocar o outro o objeto que queremos formatar igual*/
+input, textarea{
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    background-color: rgba(255,255,255,0.5);
+}
+
+input:hover , textarea:hover{
+    background-color: #dddddd;
+}
+
+legend{
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;    
+}
+
+textarea{
+    margin-top: 10px;
+}
+
+fieldset{
+    border-color: #cecece;
+    margin: 20px;
+}
+
+fieldset#sexo{
+    width: 150px;
+}
+
+fieldset#usuario {
+    /*As porcentagens no final fazem a localização em horizontal e vertical*/
+    background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco {
+    /*As porcentagens no final fazem a localização em horizontal e vertical*/
+    background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+}
+
+fieldset#mensagem {
+    /*As porcentagens no final fazem a localização em horizontal e vertical*/
+    background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+}
+
+fieldset#pedido {
+    /*As porcentagens no final fazem a localização em horizontal e vertical*/
+    background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+}
