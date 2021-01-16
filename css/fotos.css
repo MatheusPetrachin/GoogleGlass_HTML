@@ -1,122 +1,191 @@
 @charset "UTF-8";
 
 /*No arquivo fotos.html html, criamo uma lista não ordenada (ul(unordered list)) e aqui iremos configurar ela*/
-ul#album-fotos{
-    width: 700px; /*Altura*/
-    margin: 0 auto; /*margem esterna de 0px, centralizada*/
-    padding: 50px; /*Espaço entre a borda(limite) do box criado e as fotos*/
-    overflow: hidden; /*A overflow é uma propriedade que só funciona para elementos de bloco com uma altura especificada.*/
-    list-style: none; /*tira as bolinhas ou numeros etc...*/
+
+ul#album-fotos {
+    width: 700px;
+    /*Altura*/
+    margin: 0 auto;
+    /*margem esterna de 0px, centralizada*/
+    padding: 50px;
+    /*Espaço entre a borda(limite) do box criado e as fotos*/
+    overflow: hidden;
+    /*A overflow é uma propriedade que só funciona para elementos de bloco com uma altura especificada.*/
+    list-style: none;
+    /*tira as bolinhas ou numeros etc...*/
 }
+
 
 /*Aqui iremos configurar cada foto, ou cada "box" que iremos preencher com uma foto*/
-ul#album-fotos li{
-    float: left; /*esta configuração fara com que elas flutuem umas do lado das outras*/
-    width: 200px; /*aqui iremos configurar altura(width) e largura(height) de cada "bloco" ou "box" que iremos preencher com uma imagem*/
+
+ul#album-fotos li {
+    float: left;
+    /*esta configuração fara com que elas flutuem umas do lado das outras*/
+    width: 200px;
+    /*aqui iremos configurar altura(width) e largura(height) de cada "bloco" ou "box" que iremos preencher com uma imagem*/
     height: 200px;
-    margin: 10px; /*a distancia entre uma imagem(o box em que ela esta) e outra*/
-    border: 5px solid #ffffff; /*configuramos também sua borda, largura, continua e branca*/
-    background-color: #ffffff; /*aqui configuramos o fundo(papel de parede) dela*/
-    box-shadow: 1px 1px 3px rgba(0,0,0,.4); /*Efeito de sombrinha, atras do box em que colocaremos as imagens*/
-    -webkit-transition: all .4s ease-in; /*este webkit irá fazer a transição(tempo e efeito) de todas as li, monitorando todos os efeitos(todas as li) em .4segundos com o o efeito ease-in*/
+    margin: 10px;
+    /*a distancia entre uma imagem(o box em que ela esta) e outra*/
+    border: 5px solid #ffffff;
+    /*configuramos também sua borda, largura, continua e branca*/
+    background-color: #ffffff;
+    /*aqui configuramos o fundo(papel de parede) dela*/
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    /*Efeito de sombrinha, atras do box em que colocaremos as imagens*/
+    -webkit-transition: all .4s ease-in;
+    /*este webkit irá fazer a transição(tempo e efeito) de todas as li, monitorando todos os efeitos(todas as li) em .4segundos com o o efeito ease-in*/
 }
 
+
 /*Na lista não ordenada que tem um id(album-fotos), configuraremos todo span que fica numa(esta dentro) li*/
-ul#album-fotos li span{
-    opacity: 0; /*Aqui iremos esconder, provisoriamente os textes de legenda das imagens*/
-    color: #ffffff; /*Cor da fonte*/
-    text-shadow: 1px 1px 1px #000000; /*Somba preta nas letras*/
-    background-color: rgba(0,0,0,.3);
+
+ul#album-fotos li span {
+    opacity: 0;
+    /*Aqui iremos esconder, provisoriamente os textes de legenda das imagens*/
+    color: #ffffff;
+    /*Cor da fonte*/
+    text-shadow: 1px 1px 1px #000000;
+    /*Somba preta nas letras*/
+    background-color: rgba(0, 0, 0, .3);
     font-size: 9pt;
     line-height: 370px;
     padding: 5px;
 }
 
+
 /*Efeito de zoom para cada li*/
-ul#album-fotos li:hover{
+
+ul#album-fotos li:hover {
     -webkit-transform: scale(1.5);
 }
 
+
 /*Quando mover o mouse por cima de uma li o span vai ter opacidade 1*/
-ul#album-fotos li:hover span{
+
+ul#album-fotos li:hover span {
     opacity: 1;
 }
 
-ul#album-fotos li#foto01{
-    background: url('../_imagens/galeria-01.jpg') no-repeat; /*E preencheremos os "box" criados a cima com as respectivas imagens e faremos com que ela só aparece nesse box uma vez*/
-    background-position: 50% 50%; /*horizontal e vertical, assim ao invés de mostrar a parte de cima da imagem ela mostra o centro*/
-    background-size: 400px 400px; /*Definindo o tamanho correto do backround*/
-    background-color: #ffffff; /*Definindo a cor de background por baixo da imagem*/
+ul#album-fotos li#foto01 {
+    background: url('../imagens/galeria-01.jpg') no-repeat;
+    /*E preencheremos os "box" criados a cima com as respectivas imagens e faremos com que ela só aparece nesse box uma vez*/
+    background-position: 50% 50%;
+    /*horizontal e vertical, assim ao invés de mostrar a parte de cima da imagem ela mostra o centro*/
+    background-size: 400px 400px;
+    /*Definindo o tamanho correto do backround*/
+    background-color: #ffffff;
+    /*Definindo a cor de background por baixo da imagem*/
 }
+
 
 /*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
-ul#album-fotos li#foto01:hover{
-    background-position: 0px 0px; /*Irá voltar a mostrar a parte de cima da imagem*/
-    background-size: 200px 200px; /*A imagem voltara a ter o tamanho do box*/
+
+ul#album-fotos li#foto01:hover {
+    background-position: 0px 0px;
+    /*Irá voltar a mostrar a parte de cima da imagem*/
+    background-size: 200px 200px;
+    /*A imagem voltara a ter o tamanho do box*/
 }
 
-ul#album-fotos li#foto02{
-    background: url('../_imagens/galeria-02.jpg') no-repeat;
-    background-position: 50% 50%; /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
-    background-size: 400px 400px; /*Definindo o tamanho correto do backround*/
-    background-color: #ffffff; /*Definindo a cor de background por baixo da imagem*/
+ul#album-fotos li#foto02 {
+    background: url('../imagens/galeria-02.jpg') no-repeat;
+    background-position: 50% 50%;
+    /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
+    background-size: 400px 400px;
+    /*Definindo o tamanho correto do backround*/
+    background-color: #ffffff;
+    /*Definindo a cor de background por baixo da imagem*/
 }
 
-/*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
-ul#album-fotos li#foto02:hover{
-    background-position: 0px 0px; /*Irá voltar a mostrar a parte de cima da imagem*/
-    background-size: 200px 200px; /*A imagem voltara a ter o tamanho do box*/
-}
-
-ul#album-fotos li#foto03{
-    background: url('../_imagens/galeria-03.jpg') no-repeat;
-    background-position: 50% 50%; /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
-    background-size: 400px 400px; /*Definindo o tamanho correto do backround*/
-    background-color: #ffffff; /*Definindo a cor de background por baixo da imagem*/
-}
 
 /*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
-ul#album-fotos li#foto03:hover{
-    background-position: 0px 0px; /*Irá voltar a mostrar a parte de cima da imagem*/
-    background-size: 200px 200px; /*A imagem voltara a ter o tamanho do box*/
+
+ul#album-fotos li#foto02:hover {
+    background-position: 0px 0px;
+    /*Irá voltar a mostrar a parte de cima da imagem*/
+    background-size: 200px 200px;
+    /*A imagem voltara a ter o tamanho do box*/
 }
 
-ul#album-fotos li#foto04{
-    background: url('../_imagens/galeria-04.jpg') no-repeat;
-    background-position: 50% 50%; /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
-    background-size: 400px 400px; /*Definindo o tamanho correto do backround*/
-    background-color: #ffffff; /*Definindo a cor de background por baixo da imagem*/
+ul#album-fotos li#foto03 {
+    background: url('../imagens/galeria-03.jpg') no-repeat;
+    background-position: 50% 50%;
+    /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
+    background-size: 400px 400px;
+    /*Definindo o tamanho correto do backround*/
+    background-color: #ffffff;
+    /*Definindo a cor de background por baixo da imagem*/
 }
 
-/*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
-ul#album-fotos li#foto04:hover{
-    background-position: 0px 0px; /*Irá voltar a mostrar a parte de cima da imagem*/
-    background-size: 200px 200px; /*A imagem voltara a ter o tamanho do box*/
-}
-
-/*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
-ul#album-fotos li#foto05{
-    background: url('../_imagens/galeria-05.jpg') no-repeat;
-    background-position: 50% 50%; /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
-    background-size: 400px 400px; /*Definindo o tamanho correto do backround*/
-    background-color: #ffffff; /*Definindo a cor de background por baixo da imagem*/
-}
 
 /*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
-ul#album-fotos li#foto05:hover{
-    background-position: 0px 0px; /*Irá voltar a mostrar a parte de cima da imagem*/
-    background-size: 200px 200px; /*A imagem voltara a ter o tamanho do box*/
+
+ul#album-fotos li#foto03:hover {
+    background-position: 0px 0px;
+    /*Irá voltar a mostrar a parte de cima da imagem*/
+    background-size: 200px 200px;
+    /*A imagem voltara a ter o tamanho do box*/
 }
 
-ul#album-fotos li#foto06{
-    background: url('../_imagens/galeria-06.jpg') no-repeat;
-    background-position: 50% 50%; /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
-    background-size: 400px 400px; /*Definindo o tamanho correto do backround*/
-    background-color: #ffffff; /*Definindo a cor de background por baixo da imagem*/
+ul#album-fotos li#foto04 {
+    background: url('../imagens/galeria-04.jpg') no-repeat;
+    background-position: 50% 50%;
+    /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
+    background-size: 400px 400px;
+    /*Definindo o tamanho correto do backround*/
+    background-color: #ffffff;
+    /*Definindo a cor de background por baixo da imagem*/
 }
+
 
 /*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
-ul#album-fotos li#foto06:hover{
-    background-position: 0px 0px; /*Irá voltar a mostrar a parte de cima da imagem*/
-    background-size: 200px 200px; /*A imagem voltara a ter o tamanho do box*/
+
+ul#album-fotos li#foto04:hover {
+    background-position: 0px 0px;
+    /*Irá voltar a mostrar a parte de cima da imagem*/
+    background-size: 200px 200px;
+    /*A imagem voltara a ter o tamanho do box*/
+}
+
+
+/*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
+
+ul#album-fotos li#foto05 {
+    background: url('../imagens/galeria-05.jpg') no-repeat;
+    background-position: 50% 50%;
+    /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
+    background-size: 400px 400px;
+    /*Definindo o tamanho correto do backround*/
+    background-color: #ffffff;
+    /*Definindo a cor de background por baixo da imagem*/
+}
+
+
+/*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
+
+ul#album-fotos li#foto05:hover {
+    background-position: 0px 0px;
+    /*Irá voltar a mostrar a parte de cima da imagem*/
+    background-size: 200px 200px;
+    /*A imagem voltara a ter o tamanho do box*/
+}
+
+ul#album-fotos li#foto06 {
+    background: url('../imagens/galeria-06.jpg') no-repeat;
+    background-position: 50% 50%;
+    /*horizontal e vertical, assim ao invés de mostrar qualquer parte da imagem ela mostra o centro*/
+    background-size: 400px 400px;
+    /*Definindo o tamanho correto do backround*/
+    background-color: #ffffff;
+    /*Definindo a cor de background por baixo da imagem*/
+}
+
+
+/*Criando o efeito de zoom ao passar o mouse por cima da imagem*/
+
+ul#album-fotos li#foto06:hover {
+    background-position: 0px 0px;
+    /*Irá voltar a mostrar a parte de cima da imagem*/
+    background-size: 200px 200px;
+    /*A imagem voltara a ter o tamanho do box*/
 }

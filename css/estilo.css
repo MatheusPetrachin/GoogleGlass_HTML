@@ -1,8 +1,13 @@
 /*Informando ao css os caracteres que usaremos na lingua portugues*/
+
 @charset "UTF-8";
+
 /*Inserindo novas fontes(externas do google fonts) no CSS, temos muito mais fontes em google.com/fonts*/
+
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
 /*Inserindo novas fontes no CSS que temos baixado no pc*/
+
 @font-face {
     font-family: 'FonteLogo';
     src: url("../_fonts/bubblegum-sans-regular.otf");
@@ -13,87 +18,114 @@
     src: url('https://fonts.googleapis.com/css?family=Titillium+Web');
 }
 
+
 /*Aqui, nas próximas duas formatações, vamos fazer uma classe genérica para os links de todo o site*/
-a{
+
+a {
     color: #606060;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
+
 /*formatando os paragrafos "p"*/
+
 p {
-    text-align: justify; 
+    text-align: justify;
     text-indent: 50px
 }
 
+
 /*formatando o corpo(body) do site*/
+
 body {
     font-family: Arial, sans-serif;
     background-color: #dddddd;
-    color: rgba(0,0,0,1);
+    color: rgba(0, 0, 0, 1);
 }
+
 
 /*Iremos formatar o container(div) identificado como "interface"*/
-div#interface{
-    width: 900px; /*largura da interface*/
+
+div#interface {
+    width: 900px;
+    /*largura da interface*/
     background-color: #ffffff;
-    margin: -20px auto 0px auto; /*,espaço externo do container(cima, esquerda, baixo, direita)*/
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /*sombra (deslocamento lateral, deslocamento vertical, espalhamento da sombra, cor da sombra)*/
-    padding: 10px; /*,espaço interno do container(cima, esquerda, baixo, direita) ou se o valor for igual para todos os lados, fazemos como foi feito*/
+    margin: -20px auto 0px auto;
+    /*,espaço externo do container(cima, esquerda, baixo, direita)*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /*sombra (deslocamento lateral, deslocamento vertical, espalhamento da sombra, cor da sombra)*/
+    padding: 10px;
+    /*,espaço interno do container(cima, esquerda, baixo, direita) ou se o valor for igual para todos os lados, fazemos como foi feito*/
 }
 
+
 /*Iremos formatar no container header, identificado como cabeçalho tudo que for img com o id icone*/
-header#cabecalho img#icone{
-    position: relative; 
-    left: 730px; 
+
+header#cabecalho img#icone {
+    position: relative;
+    left: 730px;
     top: -110px;
 }
 
-header#cabecalho{
-    border-bottom: 1px #606060 solid; /* esta tag ira fazer a linha de separação do cabeçalho para o resto do site, no caso somente em baixo de cabeçalho(bottom) com a espessura de 1px, cor cinza e solida(contínua, existem outros modelos de bordas)*/
-    height: 150px; /*Altura do cabeçalho*/
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px /*no repeat  para não repetir a imagem como background pelo container todo seguidos de configuração de deslocamento lateral e vertical*/;
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    /* esta tag ira fazer a linha de separação do cabeçalho para o resto do site, no caso somente em baixo de cabeçalho(bottom) com a espessura de 1px, cor cinza e solida(contínua, existem outros modelos de bordas)*/
+    height: 150px;
+    /*Altura do cabeçalho*/
+    background: url("../imagens/glass-logo-peq.jpg") no-repeat 0px 80px/*no repeat  para não repetir a imagem como background pelo container todo seguidos de configuração de deslocamento lateral e vertical*/
+    ;
 }
 
-header#cabecalho h1{
+header#cabecalho h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 30pt;
     color: #606060;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.6)/*sombra no texto, segue a logica do box-shadow, ja citado a cima*/
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6)/*sombra no texto, segue a logica do box-shadow, ja citado a cima*/
     padding: 0px;
-    margin-bottom: 0px; /*Configurando apenas a margem bottom(de baixo) do titulo h1 do cabeçalho */
+    margin-bottom: 0px;
+    /*Configurando apenas a margem bottom(de baixo) do titulo h1 do cabeçalho */
 }
 
-header#cabecalho h2{
+header#cabecalho h2 {
     font-family: 'Titillium Web', sans-serif;
     font-size: 15px;
     color: #888888;
     padding: 0px;
-    margin-top: 0px; /*Configurando apenas a margem top(de cima) do titulo h2 do cabeçalho */
+    margin-top: 0px;
+    /*Configurando apenas a margem top(de cima) do titulo h2 do cabeçalho */
 }
 
+
 /*Formatando imagens com legendas, para referenciar uma classe no CSS usamos (nome da tag) "." (nome da classe), no caso o nome da tag é figure e a classe é foto-legenda*/
+
 figure.foto-legenda {
-    position: relative; /*com a posição relativa podemos colocar ela em qualquer local no site que eu quiser, dentro de body*/
-    border: 8px solid white; /*borda*/
-    box-shadow: 1px 1px 4px black;/*sombra*/
+    position: relative;
+    /*com a posição relativa podemos colocar ela em qualquer local no site que eu quiser, dentro de body*/
+    border: 8px solid white;
+    /*borda*/
+    box-shadow: 1px 1px 4px black;
+    /*sombra*/
     display: inline-block;
 }
 
+
 /*assim a imagem ira se adaptar ao tamanho da janela*/
-figure.foto-legenda img{
+
+figure.foto-legenda img {
     width: 100%;
     height: 100%;
 }
 
-figure.foto-legenda figcaption{
+figure.foto-legenda figcaption {
     opacity: 0;
-    position: absolute; /*vamos dar uma posição absoluta dentro do seu container(figcaption)*/
-    top: 0px; 
-    background-color:rgba(0,0,0,0.4);
+    position: absolute;
+    /*vamos dar uma posição absoluta dentro do seu container(figcaption)*/
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     width: 100%;
     height: 100%;
@@ -102,115 +134,162 @@ figure.foto-legenda figcaption{
     transition: opacity 1s;
 }
 
+
 /*dando efeito de sobreposição, quando passar o mouse*/
-figure.foto-legenda:hover figcaption{
+
+figure.foto-legenda:hover figcaption {
     opacity: 1;
 }
 
+
 /*Formatação do menu*/
+
+
 /*o # identifica o ID, no caso o ID deste nav é menu, então iremos estilizar com CSS o container nav identificado como menu*/
+
+
 /*neste caso formataremos tudo que for ul(unordered list) dentro da "tag" ou "container" nav identificado como menu*/
-nav#menu ul{
-    list-style: none; /*tira a decoração seja ela bolinha, numeros romanos ou naturais ou letras*/
-    text-transform: uppercase; /*coloca tudo em letra maiuscula*/ 
-    position: relative; /*se eu colocar posição relativa, ela fica apenas(preso) dentro do container nav, mas com a absoluta posso colocar onde eu quiser dentro do site, ela fica livre para isso*/
+
+nav#menu ul {
+    list-style: none;
+    /*tira a decoração seja ela bolinha, numeros romanos ou naturais ou letras*/
+    text-transform: uppercase;
+    /*coloca tudo em letra maiuscula*/
+    position: relative;
+    /*se eu colocar posição relativa, ela fica apenas(preso) dentro do container nav, mas com a absoluta posso colocar onde eu quiser dentro do site, ela fica livre para isso*/
     top: -110px;
     left: 250px;
 }
 
+
 /*Aqui faremos com que cada li fique posicionada horizontalmente*/
-nav#menu li{
-    display: inline-block;/*esta tag faz o menu, cada item dela(li) ficar listada em linha reta, horizontalmente e não uma em cima da outra*/
+
+nav#menu li {
+    display: inline-block;
+    /*esta tag faz o menu, cada item dela(li) ficar listada em linha reta, horizontalmente e não uma em cima da outra*/
 }
 
+
 /*Faremos a estilização do link(a href) de classe button no container nav que for identificado como menu*/
-nav#menu li a.button{
+
+nav#menu li a.button {
     display: block;
     background-color: #dddddd;
-    padding: 10px; /*espaço ou margem dentro do li*/
-    margin: 2px; /*espaço ou margem fora do li*/
+    padding: 10px;
+    /*espaço ou margem dentro do li*/
+    margin: 2px;
+    /*espaço ou margem fora do li*/
     transition: background-color 1s;
 }
 
-nav#menu li a.button:hover{
+nav#menu li a.button:hover {
     background-color: #606060;
 }
 
+
 /*Assim desapareceremos com o titulo "Menu Principal" mas ele continua sendo visivel pelos mecanismos de busca dentro do meu item de navegação com a identificação de menu principal, como titulo principal*/
-nav#menu h1{
+
+nav#menu h1 {
     display: none;
 }
 
+
 /*Faremos a estilização do link(href) que tiver a ancora "a" no container nav que for identificado como menu*/
-nav#menu a.button{
+
+nav#menu a.button {
     color: #000000;
     text-decoration: none;
 }
 
-nav#menu a:hover{
+nav#menu a:hover {
     color: #ffffff;
 }
 
+
 /*Iremos estilizar a nossa section com id(corpo)*/
-section#corpo{
-    display: block; /*assim fazemos ela vai ser mostrada como um bloco*/
+
+section#corpo {
+    display: block;
+    /*assim fazemos ela vai ser mostrada como um bloco*/
     width: 500px;
-    float: left; /*assim faremos com que a section corpo, flutue pelo lado esquerdo, só vai funcionar se o display estiver configurado como bloco, que é nosso caso*/
-    border-right: 1px solid #606060; /* esta tag ira fazer uma borda do lado direito do corpo com espessuta de 1 px, continua e na cor #606060*/
-    padding-right: 15px; /*este padding irá criar uma margem interna entre o conteudo desta section e sua borda*/
+    float: left;
+    /*assim faremos com que a section corpo, flutue pelo lado esquerdo, só vai funcionar se o display estiver configurado como bloco, que é nosso caso*/
+    border-right: 1px solid #606060;
+    /* esta tag ira fazer uma borda do lado direito do corpo com espessuta de 1 px, continua e na cor #606060*/
+    padding-right: 15px;
+    /*este padding irá criar uma margem interna entre o conteudo desta section e sua borda*/
 }
 
+
 /*Aqui iremos formatar todos os h2 dentro do nosso article que tem o id noticia-principal, dentro da nossa section*/
-article#noticia-principal h2{
+
+article#noticia-principal h2 {
     font-size: 13pt;
     color: #606060;
     background-color: #dddddd;
     padding: 5px 0px 5px 10px;
-    margin: 10px 0px; 10px; 0px;
+    margin: 10px 0px;
+    10px;
+    0px;
 }
 
+
 /*as próximas 3 formatações, vão fazer a formatação do cabeçalho do artigo que esta dentro da section*/
-header#cabecalho-artigo h1{
+
+header#cabecalho-artigo h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
     color: #606060;
-    margin-bottom: 0px; /*margem de baixo do h1*/
+    margin-bottom: 0px;
+    /*margem de baixo do h1*/
     margin-top: 0px;
 }
 
-header#cabecalho-artigo h2{
+header#cabecalho-artigo h2 {
     font-size: 13pt;
     color: #cecece;
     background-color: #ffffff;
-    margin: 0px; /*margem de todos os lados*/
+    margin: 0px;
+    /*margem de todos os lados*/
 }
 
-header#cabecalho-artigo h3{
+header#cabecalho-artigo h3 {
     font-size: 12pt;
     color: #606060;
 }
 
+
 /*Aqui criamos uma formatação de classe genérica para tudo que tenha uma classe "direita" fique alinhado a direita*/
-.direita{
-    text-align:right;
+
+.direita {
+    text-align: right;
 }
+
 
 /*Aqui iremos formatar a table com id tabela spec que é a tabela de especificações dentro da section(corpo)*/
-table#tabelaspec{
+
+table#tabelaspec {
     border: 1px solid #606060;
-    border-spacing: 0px; /*esta tag é especifica para trabalhar com tables e ela serve para aumentar ou diminuir o espaço ou a borda entre as células*/
-    margin-left: auto; 
-    margin-right: auto; /* com o margim left e right centralizamos o conteudo da table*/
+    border-spacing: 0px;
+    /*esta tag é especifica para trabalhar com tables e ela serve para aumentar ou diminuir o espaço ou a borda entre as células*/
+    margin-left: auto;
+    margin-right: auto;
+    /* com o margim left e right centralizamos o conteudo da table*/
 }
+
 
 /*Aqui iremos formatar todas as células(td) dentro da table com id tabela spec que é a tabela de especificações dentro da section(corpo)*/
-table#tabelaspec td{
+
+table#tabelaspec td {
     border: 1px solid #606060;
-    padding: 10px; /*com este padding, aumentamos o espaço interno de todas as células(td) da nossa table(tabela specs*/
+    padding: 10px;
+    /*com este padding, aumentamos o espaço interno de todas as células(td) da nossa table(tabela specs*/
 }
 
+
 /*Aqui iremos formatar todas as células(td) que estão na classe ce(colunas da esquerda), que estão na table de id tabelaspec*/
-table#tabelaspec td.ce{
+
+table#tabelaspec td.ce {
     color: #ffffff;
     background-color: #606060;
     text-align: right;
@@ -218,58 +297,71 @@ table#tabelaspec td.ce{
     font-weight: bold;
 }
 
+
 /*Aqui iremos formatar todas as células(td) que estão na classe cd(colunas da direita), que estão na table de id tabelaspec*/
-table#tabelaspec td.cd{
+
+table#tabelaspec td.cd {
     text-align: left;
     background-color: #cecece;
 }
 
+
 /*Aqui iremos formatar o caption(titulo) que esta na table de id tabelaspec*/
-table#tabelaspec caption{
+
+table#tabelaspec caption {
     color: #888888;
     font-size: 13pt;
-    font-weight: bolder; /*negrito*/
+    font-weight: bolder;
+    /*negrito*/
 }
 
+
 /*Aqui nós iremos formatar um span que esta numa caption que esta numa table com id="tabelaspec"*/
-table#tabelaspec caption span{
-    display: block; /*esta tag irá fazer com que seja mostrado como um bloco flutuante(irá se desconectar do texto*/
+
+table#tabelaspec caption span {
+    display: block;
+    /*esta tag irá fazer com que seja mostrado como um bloco flutuante(irá se desconectar do texto*/
     float: right;
     color: #000000;
     font-size: 8pt;
     margin-top: 10px;
 }
 
-aside#lateral{
-    display: block; /*assim fazemos ela vai ser mostrada como um bloco*/
+aside#lateral {
+    display: block;
+    /*assim fazemos ela vai ser mostrada como um bloco*/
     width: 350px;
-    float: right; /*assim faremos com que a aside lateral, flutue pelo lado direito, só vai funcionar se o display estiver configurado como bloco, que é nosso caso*/
+    float: right;
+    /*assim faremos com que a aside lateral, flutue pelo lado direito, só vai funcionar se o display estiver configurado como bloco, que é nosso caso*/
     background-color: #dddddd;
     padding: 10px;
     margin-top: 10px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,.5);/*sombra*/
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    /*sombra*/
 }
 
-aside#lateral h1{
+aside#lateral h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
     color: #606060;
     margin-top: 0px;
 }
 
-aside#lateral h2{
+aside#lateral h2 {
     background-color: #606060;
     font-size: 13pt;
     color: #ffffff;
     padding: 5px;
 }
 
-footer#rodape{
-    clear: both; /*este clear both, vai fazer com que ele não siga as instruções dadas anteriormente, fazendo o rodapé não ficar flutuando nem na direita nem na esquerda, mas sim, em baixo, no lugar correto*/
-    border-top: 1px solid #606060; /* borda do lado supeior do rodapé com espessura de 1 px, continua e na cor #606060*/
-        
+footer#rodape {
+    clear: both;
+    /*este clear both, vai fazer com que ele não siga as instruções dadas anteriormente, fazendo o rodapé não ficar flutuando nem na direita nem na esquerda, mas sim, em baixo, no lugar correto*/
+    border-top: 1px solid #606060;
+    /* borda do lado supeior do rodapé com espessura de 1 px, continua e na cor #606060*/
 }
 
-footer#rodape p{
-    text-align: center; /*Centralizamos o conteudo "p" ou tudo que for paragrafo(p) que esta no footer, chamado rodapé(com id="rodapé"), esteja centralizado*/
+footer#rodape p {
+    text-align: center;
+    /*Centralizamos o conteudo "p" ou tudo que for paragrafo(p) que esta no footer, chamado rodapé(com id="rodapé"), esteja centralizado*/
 }
